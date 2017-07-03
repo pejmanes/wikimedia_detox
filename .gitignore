@@ -1,0 +1,4 @@
+*.tsv
+.idea/
+venv/
+.DS_Store
