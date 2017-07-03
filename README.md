@@ -1,5 +1,5 @@
 # wikimedia_detox
-Simple text classification application based on the [wikipedia detox research](https://meta.wikimedia.org/wiki/Research:Detox/Data_Release)
+Simple text classification application based on the [wikipedia detox research](https://meta.wikimedia.org/wiki/Research:Detox/Data_Release).
 ## How to run
 In order to run the app, please download the following files to your local data directory:
  
@@ -10,7 +10,7 @@ In order to run the app, please download the following files to your local data 
  
 Assign the path to your data directory to the “local_path_dir” variable at the top of [preprocessing.py](https://github.com/pejmanes/wikimedia_detox/blob/master/preprocessing/preprocessing.py). 
 
-Python3.6 [run](https://github.com/pejmanes/wikimedia_detox/blob/master/run.py) will start the application.  
+Python3.6 [run.py](https://github.com/pejmanes/wikimedia_detox/blob/master/run.py) will start the application.  
  
 This application was built using Python 3.6 and PyQt 5. 
 
@@ -30,7 +30,7 @@ After the user is satisfied with the accuracy of the classification based on the
 After a model has been trained, the “input” text-box can be used to type or paste text, in order to predict its quality in terms of “offensive language” or “not offensive”.
  
 ### Classifiers
-LogisticRegression and LinearSVC are implemented from the Scikit-learn library. LinearSVC yields slightly higher accuracy.
+[LogisticRegression](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) and [LinearSVC](http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html) are implemented from the Scikit-learn library. LinearSVC yields slightly higher accuracy.
  
 ### Analyzer
 Three options are word, character, and character_wb which is a variation of character based feature extraction where word boundaries are taken into consideration. Due to misspellings and the nature of the language on social media, word-based feature extraction yields inferior results as opposed to character-based feature extraction, and taking word boundaries into account improves the accuracy.
